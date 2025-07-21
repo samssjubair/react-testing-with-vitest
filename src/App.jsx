@@ -8,7 +8,7 @@ function App() {
     <>
       <Greeting name={"Samss"} />
       <Counter />
-      <UserProfile userId={4} />
+      <UserProfile userId={3} />
     </>
   );
 }

@@ -9,12 +9,15 @@ describe("useCounter", () => {
     const { result } = renderHook(() => useCounter(5));
     expect(result.current.count).toBe(5);
   });
-  it("increment", () => {
+
+  it("increments", () => {
     const { result } = renderHook(() => useCounter(0));
     expect(result.current.count).toBe(0);
+
     act(() => {
       result.current.increment();
     });
+
     expect(result.current.count).toBe(1);
     act(() => {
       result.current.increment();
@@ -22,6 +25,7 @@ describe("useCounter", () => {
 
     expect(result.current.count).toBe(2);
   });
+
   it("decrement", () => {
     const { result } = renderHook(() => useCounter(0));
     expect(result.current.count).toBe(0);
